@@ -4,11 +4,13 @@ export class Component {
     const { 
       tagName = 'div',
       state = {},
-      props = {}
+      props = {},
+      className = ''
     } = payload;
     this.el = document.createElement(tagName);
     this.state = state;
     this.props = props;
+    this.el.className = className;
     this.render();
   }
   render() {
@@ -24,8 +26,14 @@ function routeRender(routes) {
   }
 
   const routerView = document.querySelector('router-view');
+  // http://localhost:1234/#/about?a=123&b=456&c=789
+  // hash = http://localhost:1234/#/about
+  // queryString = a=123&b=456&c=789
   const [hash, queryString = ''] = location.hash.split('?');
 
+  // a=123&b=456&c=789
+  // [ "a=123", "b=456", "c=789" ]
+  // { a:123, b:456, c:789 }
   const query =  queryString
   .split('&')
   .reduce((acc, cur) => {
@@ -36,6 +44,7 @@ function routeRender(routes) {
   history.replaceState(query, '');
 
   const currentRoute = routes.find(route => new RegExp(`${route.path}/?$`).test(hash));
+  console.log(currentRoute);
   routerView.innerHTML = '';
   routerView.append(new currentRoute.component().el);
 
