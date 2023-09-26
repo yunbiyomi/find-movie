@@ -1,10 +1,41 @@
 body {
-  height: 3000px;
+  font-family: 'Noto Sans KR', sans-serif;
+  height: 1000px;
+  background-color: #1d2d44;
+  color: #0d1321;
 }
 
 header {
   position: fixed;
   top: 0;
   width: 100%;
-  background-color: yellow;
+  height: 50px;
+  background-color: #1d2d44;
+  color: #f0ebd8;
+}
+
+input {
+  border: none;
+  outline: none;
+}
+
+button {
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.container {
+  max-width: 1120px;
+  margin: 0 auto;
+}
+
+.headline {
+  margin: 80px auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #edf2f4;
+  font-family: 'Gugi', cursive;
+  font-size: 120px;
 }
