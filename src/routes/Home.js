@@ -1,17 +1,15 @@
 import { Component } from "../core";
-import TextField from "../components/Textfield";
-import Message from "../components/Message";
-import Title from "../components/Title";
+import Headline from "../components/Headline";
+import Search from "../components/Search";
 
 export default class Home extends Component {
   render() {
-    this.el.innerHTML = /* html */ `
-      <h1>메인 페이지</h1>
-    `
+    const headline = new Headline().el
+    const search = new Search().el
+
     this.el.append(
-      new TextField().el,
-      new Message().el,
-      new Title().el
-      );
+      headline,
+      search
+    );
   }
 }
