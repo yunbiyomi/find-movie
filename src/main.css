@@ -39,3 +39,36 @@ button {
   font-family: 'Gugi', cursive;
   font-size: 120px;
 }
+
+.search {
+  display: flex;
+  gap: 10px;
+}
+
+.search input {
+  flex-grow: 1;
+  width: 700px;
+  height: 60px;
+  box-sizing: border-box;
+  padding: 0 20px;
+  background-color: #edf2f4;
+  font-size: 20px;
+  font-weight: 700;
+  border-radius: 7px;
+}
+
+.search button {
+  min-width: 150px;
+  height: 60px;
+  background-color: #3e5c76;
+  color: #edf2f4;
+  font-size: 28px;
+  font-weight: 700;
+  border-radius: 7px;
+  transition: .3s;
+}
+
+.search button:hover {
+  background-color: #0d1321;
+  color: #edf2f4;
+}
