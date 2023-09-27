@@ -1,8 +1,17 @@
+:root {
+  --black: #0d1321;
+  --white: #edf2f4;
+  --light-beige: #f0ebd8;
+  --dark-blue: #1d2d44;
+  --blue: #3e5c76;
+  --light-blue: #748cab;
+}
+
 body {
   font-family: 'Noto Sans KR', sans-serif;
   height: 1000px;
-  background-color: #1d2d44;
-  color: #0d1321;
+  background-color: var(--dark-blue);
+  color: var(--black);
 }
 
 header {
@@ -10,8 +19,8 @@ header {
   top: 0;
   width: 100%;
   height: 50px;
-  background-color: #1d2d44;
-  color: #f0ebd8;
+  background-color: var(--dark-blue);
+  color: var(--light-beige);
 }
 
 input {
@@ -35,7 +44,7 @@ button {
   display: flex;
   justify-content: center;
   align-items: center;
-  color: #edf2f4;
+  color: var(--white);
   font-family: 'Gugi', cursive;
   font-size: 120px;
 }
@@ -51,7 +60,7 @@ button {
   height: 60px;
   box-sizing: border-box;
   padding: 0 20px;
-  background-color: #edf2f4;
+  background-color: var(--white);
   font-size: 20px;
   font-weight: 700;
   border-radius: 7px;
@@ -60,8 +69,8 @@ button {
 .search button {
   min-width: 150px;
   height: 60px;
-  background-color: #3e5c76;
-  color: #edf2f4;
+  background-color: var(--blue);
+  color: var(--white);
   font-size: 28px;
   font-weight: 700;
   border-radius: 7px;
@@ -69,6 +78,6 @@ button {
 }
 
 .search button:hover {
-  background-color: #0d1321;
-  color: #edf2f4;
+  background-color: var(--black);
+  color: var(--white);
 }
