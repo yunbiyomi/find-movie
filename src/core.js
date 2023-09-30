@@ -64,14 +64,15 @@ export function createRouter(routes) {
 ///// Store /////
 export class Store { 
   constructor(state) {
-    this.state = {};
-    this.observers = {};
+    this.state = {}
+    this.observers = {}
     for(const key in state) {
       Object.defineProperty(this.state, key, {
         get: () => state[key],
         set: val => {
           state[key] = val;
-          this.observers[key].forEach(observer => observer(val));
+          if(Array.isArray(this.observers[key]))
+            this.observers[key].forEach(observer => observer(val));
         }
       })
     }
