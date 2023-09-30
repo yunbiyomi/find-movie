@@ -9,7 +9,6 @@
 
 body {
   font-family: 'Noto Sans KR', sans-serif;
-  height: 1000px;
   background-color: var(--dark-blue);
   color: var(--black);
 }
@@ -32,6 +31,13 @@ button {
   border: none;
   outline: none;
   cursor: pointer;
+}
+
+a {
+  display: block;
+  text-decoration: none;
+  cursor: pointer;
+  color: var(--white);
 }
 
 .container {
@@ -80,4 +86,64 @@ button {
 .search button:hover {
   background-color: var(--black);
   color: var(--white);
+}
+
+.movie-list {
+  box-sizing: border-box;
+  margin: 40px auto;
+  padding: 20px;
+  width: 100%;
+  border-radius: 7px;
+  background-color: var(--blue);
+}
+
+.movies {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.movie {
+  width: 200px;
+  height: 300px;
+  background-size: cover;
+  position: relative;
+}
+
+.movie:hover::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  border: 6px solid var(--white);
+}
+
+.info {
+  width: 100%;
+  height: 65px;
+  box-sizing: border-box;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  text-align: center;
+  background-color: rgba(116, 140, 171, .4);
+  backdrop-filter: blur(10px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.info .year {
+  font-size: 14px;
+}
+
+.info .title {
+  font-size: 16px;
+  font-weight: 700;
+  margin-top: 8px;
+  padding: 0 4px;
 }
