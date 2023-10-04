@@ -15,11 +15,19 @@ export default class MovieItem extends Component {
     const posturl = `https://image.tmdb.org/t/p/w500${movie.poster_path}`;
     this.el.style.backgroundImage = `url(${posturl})`;
     
-    this.el.innerHTML = /* html */ `
-      <div class="info">
-        <div class="year">${movie.release_date.match(/\d{4}/)[0]}</div>
-        <div class="title">${movie.title}</div>
-      </div>
-    `
+    if (movie.release_date) {
+      this.el.innerHTML = /* html */ `
+        <div class="info">
+          <div class="year">${movie.release_date.match(/\d{4}/)[0]}</div>
+          <div class="title">${movie.title}</div>
+        </div>
+      `;
+    } else {
+      this.el.innerHTML = /* html */ `
+        <div class="info">
+          <div class="title">${movie.title}</div>
+        </div>
+      `;
+    }
   }
 }
