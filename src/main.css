@@ -193,33 +193,53 @@ a {
 }
 
 .the-movie {
-
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 20px;
+  color: var(--white);
+  font-size: 25px;
 }
 
 .the-movie .poster {
-
-}
-
-.the-movie .specs {
-
+  width: 1000px;
+  height: 500px;
+  background-size: cover;
+  background-color: var(--black);
+  margin: 30px auto;
 }
 
 .the-movie .title {
-
+  font-size: 50px;
+  font-weight: 700;
 }
 
-.the-movie .lables {
+.the-movie .labels {
+  font-size: 22px;
+}
 
+.the-movie .specs {
+  display: flex;
+}
+
+.the-movie .wrap {
+  display: flex;
+  margin-right: 50px;
+  font-size: 22px;
+}
+.the-movie h3 {
+  margin-right: 10px;
+  color: var(--light-blue);
 }
 
 .the-movie .tagline {
-
+  margin-top: 10px;
+  color: var(--light-beige);
+  font-weight: 700;
 }
 
 .the-movie .plot {
-
-}
-
-.the-movie h3 {
-
+  margin-top: 10px;
+  font-size: 20px;
+  line-height: 1.5;
 }
