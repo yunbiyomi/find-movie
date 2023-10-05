@@ -5,6 +5,7 @@ const store = new Store({
   page: 1,
   pageMax: 1,
   movies: [],
+  movie: {},
   loading: false,
   message: '영화를 검색해보세요!'
 })
@@ -23,6 +24,7 @@ export const searchMovies = async page => {
     // https://api.themoviedb.org/3/search/movie?api_key=46fd1ed18ff9f50afaea5ce2c1da227d&include_adult=false&language=ko-KR&page=${page}&query=${store.state.searchText}
     const res = await fetch(`https://api.themoviedb.org/3/search/movie?api_key=46fd1ed18ff9f50afaea5ce2c1da227d&include_adult=false&language=ko-KR&page=${page}&query=${store.state.searchText}`);
     const { results, total_pages, total_results } = await res.json();
+    console.log(results);
 
     if(Number(total_results) > 0){
       store.state.movies = [
@@ -41,5 +43,14 @@ export const searchMovies = async page => {
   }
   finally {
     store.state.loading = false;
+  }
+}
+
+export const getMovieDetails = async id => {
+  try {
+    const res = await fetch(`https://api.themoviedb.org/3/movie/${id}?api_key=46fd1ed18ff9f50afaea5ce2c1da227d&include_adult=false&language=ko-KR&append_to_response=credits`);
+    store.state.movie = await res.json();
+  } catch (error) {
+    console.log('getMovieDetails error:', error);
   }
 }

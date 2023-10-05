@@ -134,6 +134,7 @@ a {
   height: 300px;
   background-size: cover;
   position: relative;
+  background-color: var(--black);
 }
 
 .movie:hover::after {
@@ -189,4 +190,36 @@ a {
 
 .btn-more.hide {
   display: none;
+}
+
+.the-movie {
+
+}
+
+.the-movie .poster {
+
+}
+
+.the-movie .specs {
+
+}
+
+.the-movie .title {
+
+}
+
+.the-movie .lables {
+
+}
+
+.the-movie .tagline {
+
+}
+
+.the-movie .plot {
+
+}
+
+.the-movie h3 {
+
 }
