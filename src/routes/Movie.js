@@ -7,7 +7,16 @@ export default class Movie extends Component {
       className: 'container the-movie'
     })
   }
+
   async render() {
+    this.el.innerHTML = /* html */ `
+      <div class="poster skeleton"></div>
+      <div class="title skeleton"></div>
+      <div class="labels skeleton"></div>
+      <div class="wrap skeleton"></div>
+      <div class="tagline skeleton"></div>
+      <div class="plot skeleton"></div>
+    `
     await getMovieDetails(history.state.id);
     console.log(movieStore.state.movie);
     const { movie } = movieStore.state;
