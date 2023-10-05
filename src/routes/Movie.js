@@ -36,9 +36,10 @@ export default class Movie extends Component {
         </div>
       </div>
 
-      <div class="tagline">
-        " ${movie.tagline} "
-      </div>
+      ${movie.tagline ? `
+        <div class="tagline">
+          " ${movie.tagline} "
+        </div>` : ''}
 
       <div class="plot">
         ${movie.overview}
