@@ -116,6 +116,12 @@ a {
   background-color: var(--blue);
 }
 
+.message {
+  color: var(--white);
+  font-size: 20px;
+  text-align: center;
+}
+
 .movies {
   display: flex;
   justify-content: center;
