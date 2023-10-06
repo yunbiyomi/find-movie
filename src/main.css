@@ -333,3 +333,13 @@ footer a {
 footer a:hover {
   color: var(--white);
 }
+
+.not-found {
+  margin: 100px auto;
+  font-size: 100px;
+  font-weight: 700;
+  font-family: 'Gugi', cursive;
+  color: var(--white);
+  text-align: center;
+  opacity: .85;
+}
