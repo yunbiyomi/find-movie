@@ -319,3 +319,17 @@ a {
 .the-movie .plot.skeleton {
   height: 100px;
 }
+
+footer {
+  padding: 40px 40px 60px;
+  text-align: center;
+}
+
+footer a {
+  font-size: 15px;
+  color: var(--light-blue);
+}
+
+footer a:hover {
+  color: var(--white);
+}
