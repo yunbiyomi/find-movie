@@ -5,6 +5,11 @@ import MovieList from "../components/MovieList";
 import MovieListMore from "../components/MovieListMore";
 
 export default class Home extends Component {
+  constructor() {
+    super({
+      className: 'container'
+    })
+  }
   render() {
     const headline = new Headline().el
     const search = new Search().el
